@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Element Delete</title>
+  </head>
+  <body>
+    <input type="text" id="position" placeholder="enter position" />
+    <button onclick="removeData()">Remove Data</button>
+  </body>
+  <script>
+    // without function
+    let data = [10, 20, 30, 40, 50];
+    let position = 3;
+    for (let i = position; i < data.length - 1; i++) {
+      data[i] = data[i + 1];
+    }
+    data.length = data.length - 1;
+    console.log(data);
+    // with button
+    function removeData() {
+      let data = [30, 20, 45, 76, 20, 80];
+      let position = document.getElementById("position").value;
+      position = parseInt(position);
+      for (let i = position; i < data.length - 1; i++) {
+        data[i] = data[i + 1];
+      }
+      data.length = data.length - 1;
+      console.warn(data);
+    }
+  </script>
+</html>

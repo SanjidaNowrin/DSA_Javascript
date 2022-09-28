@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insert Element in Array</title>
+  </head>
+  <body>
+    <input type="text" id="position" placeholder="enter position" />
+    <input type="text" id="newData" placeholder="enter element" />
+    <button onclick="insertData()">Insert</button>
+  </body>
+  <script>
+    // without function
+    let data = [60, 30, 90, 50, 40];
+    let newData = 100;
+    let insertPosition = 2;
+
+    for (let i = data.length - 1; i >= 0; i--) {
+      if (i >= insertPosition) {
+        data[i + 1] = data[i];
+        if (i == insertPosition) {
+          data[i] = newData;
+        }
+      }
+    }
+    console.warn(data);
+    // with function
+    function insertData() {
+      let data = [60, 30, 90, 50, 40];
+      let newData = parseInt(document.getElementById("newData").value);
+      let insertPosition = parseInt(document.getElementById("position").value);
+      for (let i = data.length - 1; i >= 0; i--) {
+        if (i >= insertPosition) {
+          data[i + 1] = data[i];
+          if (i == insertPosition) {
+            data[i] = newData;
+          }
+        }
+      }
+      console.warn(data);
+    }
+  </script>
+</html>
