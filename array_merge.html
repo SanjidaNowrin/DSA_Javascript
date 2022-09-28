@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Merge</title>
+  </head>
+  <body></body>
+  <script>
+    let data = [1, 2, 3, 4, 5];
+    let dataTwo = [6, 7, 8, 9, 10];
+    let dataThree = [];
+    for (let i = 0; i < data.length; i++) {
+      dataThree[i] = data[i];
+    }
+    for (let i = 0; i < dataTwo.length; i++) {
+      dataThree[data.length + i] = dataTwo[i];
+    }
+    console.log(dataThree);
+  </script>
+</html>
+<!-- 19 line -->
+<!-- 4 line complexity -->
+<!-- without sorting data this one is best -->
