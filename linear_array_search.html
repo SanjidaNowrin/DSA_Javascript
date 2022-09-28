@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Search</title>
+  </head>
+  <body>
+    <input type="text" placeholder="enter value" id="searchEl" />
+    <button onclick="searchData()">Search Data</button>
+  </body>
+  <script>
+    let data = [10, 20, 30, 40, 50, 60, 70, 80, 90];
+    let item = 40;
+    let index;
+    // i=index; data[i]=value
+    for (let i = 0; i < data.length - 1; i++) {
+      if (data[i] === item) {
+        index = i;
+        break;
+      }
+    }
+    console.log(index);
+    // with button
+    function searchData() {
+      let data = [20, 40, 60, 5, 10, 70, 80, 99];
+      let item = document.getElementById("searchEl").value;
+      let index;
+      for (i = 0; i <= data.length - 1; i++) {
+        // console.warn(data[i])
+        if (data[i] === parseInt(item)) {
+          index = i;
+          break;
+        }
+      }
+      console.log(index);
+    }
+  </script>
+</html>
